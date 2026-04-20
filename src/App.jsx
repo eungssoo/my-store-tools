@@ -236,7 +236,7 @@ function LabelGenerator() {
     updateRow(id, 'error', null);
     updateRow(id, 'result', '');
 
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
     const payload = {
       contents: [{ parts: [{ text: `다음 아시안 식료품 인보이스 텍스트를 분석하여 정확한 제조사명, 영문 상품명, 국문 상품명을 추출 및 번역하세요. \n인보이스 텍스트: "${textToProcess}"` }] }],
       systemInstruction: { parts: [{ text: "당신은 마트 상품 데이터 정제 AI입니다. 납품서에 불규칙하게 축약된 텍스트(예: WNG -> WANG KOREA)를 분석하여 공식 제조사명과 정확한 상품명을 도출해야 합니다. 묶음(팩) 표기는 반드시 '용량*수량pk' 형식(예: 210g*3pk)으로 표준화하세요. 반드시 제공된 JSON 스키마에 맞추어 응답하세요." }] },
