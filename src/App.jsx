@@ -6,8 +6,7 @@ import {
   RotateCcw, DollarSign, Coins, Wallet, Play
 } from 'lucide-react';
 
-const apiKey = "AIzaSyBFdGACeDXppBG4ntS4n80HHXWjIds6XlU"; // 시스템 환경에서 API 키 주입
-
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
 // ==========================================
 // 1. 단가 및 판매가 계산기 컴포넌트
 // ==========================================
